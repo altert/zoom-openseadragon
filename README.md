@@ -1,8 +1,8 @@
-# OpenSeadragon Zoom #
+# OpenSeadragon Zoom Wordpress Plugin#
 
 
 ## Description ##
-OpenSeadragon Zoom is an implementation of [OpenSeadragon](http://openseadragon.github.io//), an open-source, web-based viewer for high-resolution zoomable images, implemented in pure JavaScript, for desktop and mobile.
+OpenSeadragon Zoom is a wordpress plugin implementating of [OpenSeadragon](http://openseadragon.github.io//), an open-source, web-based viewer for high-resolution zoomable images, implemented in pure JavaScript, for desktop and mobile.
 
 It allows to create zoomable galleries from standart wordpress images as well as from deepzoom images.
 
