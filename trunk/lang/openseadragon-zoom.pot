@@ -1,0 +1,54 @@
+# Copyright (C) 2015 WP Reel
+# This file is distributed under the same license as the WP Reel package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Reel 0.8\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wp-reel\n"
+"POT-Creation-Date: 2015-05-04 17:09:10+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: wp-reel.php:31
+msgid "WP Reel Options"
+msgstr ""
+
+#: wp-reel.php:39
+msgid "Replace wordpress gallery"
+msgstr ""
+
+#: wp-reel.php:47
+msgid "Default animation speed"
+msgstr ""
+
+#: wp-reel.php:64
+msgid "Options related to WP Reel plugin"
+msgstr ""
+
+#: wp-reel.php:70
+msgid "Replaces all galleries with WP Reel galleries"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Reel"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (WP Reel 0.8)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  plugin.pot (WP Reel 0.8)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://altert.net"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin allows to replace WP gallery with <a href=\"http://jquery."
+"vostrel.cz/reel\">jQuery.Reel</a> by Petr Vostřel"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Alexey Tikhonov"
+msgstr ""
