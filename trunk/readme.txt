@@ -17,7 +17,7 @@ It allows to create zoomable galleries from standart wordpress images as well as
 
 You can see [live demo here](http://altert.net/demo/openseadragon-zoom)
 
-It follows New BSD license  
+OpenSeadragon Zoom is released under the New BSD license  
 
 == Installation ==
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. 
