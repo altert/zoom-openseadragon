@@ -8,7 +8,8 @@ It allows to create zoomable galleries from standart wordpress images as well as
 
 You can see [live demo here](http://altert.net/demo/openseadragon-zoom)
 
-It follows New BSD license  
+OpenSeadragon Zoom is released under the New BSD license  
+  
 
 ## Installation ##
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. 
@@ -56,15 +57,15 @@ Several OpenSeadragon parameters are also supported, see http://openseadragon.gi
 
 ## Frequently Asked Questions ##
 
-= How to replace specific gallery with OpenSeadragon Zoom gallery? =
+### How to replace specific gallery with OpenSeadragon Zoom gallery? ###
 
 To replace wordpress gallery with OpenSeadragon Zoom you need to add openseadragon="true" to gallery shortcode.
 
-= How to replace all galleries with reel gallery? =
+### How to replace all galleries with reel gallery? ###
 
 Use OpenSeadragon Zoom Options section in Settings => Media.
 
-= How to create really big zoomable image? =
+### How to create really big zoomable image? ###
 
 See http://openseadragon.github.io/examples/creating-zooming-images/
 
