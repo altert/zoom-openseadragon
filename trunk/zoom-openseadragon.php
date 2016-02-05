@@ -1,10 +1,10 @@
 <?php
 /* 
-Plugin Name: OpenSeadragon Zoom
+Plugin Name: Zoom OpenSeadragon
 Plugin URI: http://altert.net
 Author URI: http://altert.net
 Version: 1.0
-Text Domain: openseadragon-zoom
+Text Domain: zoom-openseadragon
 Domain Path: /lang
 Author:Alexey Tikhonov
 Description: OpenSeadragon Zoom is an implementation of [OpenSeadragon](http://openseadragon.github.io//), an open-source, web-based viewer for high-resolution zoomable images, implemented in pure JavaScript, for desktop and mobile.
@@ -15,21 +15,21 @@ It allows to create zoomable galleries from standart wordpress images as well as
 
 
 
-add_action( 'plugins_loaded', 'openseadragon_zoom_load_textdomain' );
+add_action( 'plugins_loaded', 'zoom_openseadragon_load_textdomain' );
 
 
-function openseadragon_zoom_load_textdomain() {
-  load_plugin_textdomain( 'openseadragon-zoom', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' ); 
+function zoom_openseadragon_load_textdomain() {
+  load_plugin_textdomain( 'zoom-openseadragon', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' ); 
 }
 
-add_action('wp_enqueue_scripts', 'openseadragon_zoom_scripts_styles');
+add_action('wp_enqueue_scripts', 'zoom_openseadragon_scripts_styles');
 
 // Scripts initialization
 
-function openseadragon_zoom_scripts_styles() {
+function zoom_openseadragon_scripts_styles() {
 	if(!is_admin()) {
-	wp_register_style( 'openseadragon_zoom', plugins_url( 'openseadragon-zoom/css/style.css' ) );
-	wp_enqueue_style( 'openseadragon_zoom' );
+	wp_register_style( 'zoom_openseadragon', plugins_url( 'zoom-openseadragon/css/style.css' ) );
+	wp_enqueue_style( 'zoom_openseadragon' );
 	wp_enqueue_script ('jquery');
 	wp_enqueue_script('openseadragon', plugin_dir_url( __FILE__ ) .'js/openseadragon.min.js', array('jquery'), '', true);
 	}
@@ -37,57 +37,57 @@ function openseadragon_zoom_scripts_styles() {
 
 // Add custom settings via settings API
 
-function openseadragon_zoom_settings_api_init() {
+function zoom_openseadragon_settings_api_init() {
 	// Add the section to media settings so we can add our
 	// fields to it
 	add_settings_section(
-		'openseadragon_zoom_setting_section',
-		__('OpenSeadragon Zoom Options', 'openseadragon-zoom'),
-		'openseadragon_zoom_setting_section_callback_function',
+		'zoom_openseadragon_setting_section',
+		__('OpenSeadragon Zoom Options', 'zoom-openseadragon'),
+		'zoom_openseadragon_setting_section_callback_function',
 		'media'
 	);
 	
 
 	add_settings_field(
-		'openseadragon_zoom_setting_replace_gallery',
-		__('Replace wordpress gallery', 'openseadragon-zoom'),
-		'openseadragon_zoom_setting_callback_function_replace_gallery',
+		'zoom_openseadragon_setting_replace_gallery',
+		__('Replace wordpress gallery', 'zoom-openseadragon'),
+		'zoom_openseadragon_setting_callback_function_replace_gallery',
 		'media',
-		'openseadragon_zoom_setting_section'
+		'zoom_openseadragon_setting_section'
 	);
 	
 	
 	
 	// Register our setting so that $_POST handling is done for us and
 	// our callback function just has to echo the <input>
-    register_setting( 'media', 'openseadragon_zoom_setting_replace_gallery' );
+    register_setting( 'media', 'zoom_openseadragon_setting_replace_gallery' );
  
 }
 
 
-add_action( 'admin_init', 'openseadragon_zoom_settings_api_init' );
+add_action( 'admin_init', 'zoom_openseadragon_settings_api_init' );
 
 // OpenSeadragon Zoom options on media settings
 
-function openseadragon_zoom_setting_section_callback_function() {
-	echo '<p>'.__('Options related to OpenSeadragon plugin', 'openseadragon-zoom').'</p>';
+function zoom_openseadragon_setting_section_callback_function() {
+	echo '<p>'.__('Options related to OpenSeadragon plugin', 'zoom-openseadragon').'</p>';
 }
 
 
 
-function openseadragon_zoom_setting_callback_function_replace_gallery() {
-	echo '<input name="openseadragon_zoom_setting_replace_gallery" id="openseadragon_zoom_setting_replace_gallery" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'openseadragon_zoom_setting_replace_gallery' ), false ) . ' /> '.__('Replaces all galleries with OpenSeadragon Zoom galleries', 'openseadragon-zoom');
+function zoom_openseadragon_setting_callback_function_replace_gallery() {
+	echo '<input name="zoom_openseadragon_setting_replace_gallery" id="zoom_openseadragon_setting_replace_gallery" type="checkbox" value="1" class="code" ' . checked( 1, get_option( 'zoom_openseadragon_setting_replace_gallery' ), false ) . ' /> '.__('Replaces all galleries with OpenSeadragon Zoom galleries', 'zoom-openseadragon');
 
 }
 
 
 
 // Custom filter function to modify default gallery shortcode output
-$openseadragon_zoom_galleryid=0;
-function openseadragon_zoom_gallery( $output, $attr ) {
+$zoom_openseadragon_galleryid=0;
+function zoom_openseadragon_gallery( $output, $attr ) {
 
 	// Initialize
-	global $post, $wp_locale,$openseadragon_zoom_galleryid;
+	global $post, $wp_locale,$zoom_openseadragon_galleryid;
     $return = $output;
 
 
@@ -142,7 +142,7 @@ function openseadragon_zoom_gallery( $output, $attr ) {
 	
 
 
-	if (!get_option( 'openseadragon_zoom_setting_replace_gallery' , false ) && !(($openseadragon=="true")||($openseadragon=="1"))) return $return;
+	if (!get_option( 'zoom_openseadragon_setting_replace_gallery' , false ) && !(($openseadragon=="true")||($openseadragon=="1"))) return $return;
 	
 	$images=0;
 	
@@ -217,7 +217,7 @@ function openseadragon_zoom_gallery( $output, $attr ) {
     $i = 0;
 
 	$output="<script type='text/javascript'>jQuery(document).ready(function(){var viewer=OpenSeadragon({";
-	$output.="id: 'deepzoomContainer".$openseadragon_zoom_galleryid."',";
+	$output.="id: 'deepzoomContainer".$zoom_openseadragon_galleryid."',";
 	$output.="prefixUrl:'".plugins_url( 'images/', __FILE__ )."',";
 	if ($images>1) $output.="collectionMode:true,";
 	$output.="collectionRows:false,";
@@ -299,7 +299,7 @@ function openseadragon_zoom_gallery( $output, $attr ) {
 	       {                        
 	       if (i!=-1) {
 	           var title=this.tileSources[i].title;
-	           if (title!='') jQuery('#deepzoomCaption".$openseadragon_zoom_galleryid."').html(title);	          
+	           if (title!='') jQuery('#deepzoomCaption".$zoom_openseadragon_galleryid."').html(title);	          
 	          }
 	      
 	       }
@@ -329,12 +329,12 @@ function openseadragon_zoom_gallery( $output, $attr ) {
 	$output .= "});"; // end of document ready
     $output .= "</script>";
     if ($captions) $output.="<figure  style='width: ".$width."px' class='wp-caption alignnone'>";
-    $output .= "<div class='deepzoomContainer' id='deepzoomContainer".$openseadragon_zoom_galleryid."' style='width: ".$width."px; height: ".$height."px;'></div>";
-    if ($captions) $output.="<figcaption id='deepzoomCaption".$openseadragon_zoom_galleryid."' class='wp-caption-text'>".$caption."</figcaption></figure>";
-    $openseadragon_zoom_galleryid++;
+    $output .= "<div class='deepzoomContainer' id='deepzoomContainer".$zoom_openseadragon_galleryid."' style='width: ".$width."px; height: ".$height."px;'></div>";
+    if ($captions) $output.="<figcaption id='deepzoomCaption".$zoom_openseadragon_galleryid."' class='wp-caption-text'>".$caption."</figcaption></figure>";
+    $zoom_openseadragon_galleryid++;
 	return $output;
 
 }
 
 // Apply filter to default gallery shortcode
-add_filter( 'post_gallery', 'openseadragon_zoom_gallery', 10, 2 );
+add_filter( 'post_gallery', 'zoom_openseadragon_gallery', 10, 2 );

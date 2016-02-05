@@ -1,4 +1,4 @@
-=== OpenSeadragon Zoom ===
+=== Zoom OpenSeadragon ===
 Contributors: altert
 Tags: gallery, zoom, pyramid, highres, tiles, tiled, image, images
 Donate link: http://altert.net/demo/donate/
@@ -11,18 +11,18 @@ License URI: http://altert.net/BSD-LICENSE.txt
 Create zoomable galleries from standart wordpress images as well as from deepzoom images.
 
 == Description ==
-OpenSeadragon Zoom is an implementation of [OpenSeadragon](http://openseadragon.github.io//), an open-source, web-based viewer for high-resolution zoomable images, implemented in pure JavaScript, for desktop and mobile.
+Zoom OpenSeadragon is an implementation of [OpenSeadragon](http://openseadragon.github.io//), an open-source, web-based viewer for high-resolution zoomable images, implemented in pure JavaScript, for desktop and mobile.
 
 It allows to create zoomable galleries from standart wordpress images as well as from deepzoom images.
 
 You can see [live demo here](http://altert.net/demo/openseadragon-zoom)
 
-OpenSeadragon Zoom is released under the New BSD license  
+Zoom OpenSeadragon is released under the New BSD license  
 
 == Installation ==
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. 
 
-To replace wordpress gallery with OpenSeadragon Zoom gallery you need to add `openseadragon="true"` to gallery shortcode.  You can also use Media options to replace all galleries with OpenSeadragon Zoom gallery. 
+To replace wordpress gallery with Zoom OpenSeadragon gallery you need to add `openseadragon="true"` to gallery shortcode.  You can also use Media options to replace all galleries with Zoom OpenSeadragon gallery. 
 
 To show zoomable images, e.g. Deep Zoom images, you need to add paths of them to zoomimages attribute of shortcode, for example
 
@@ -57,7 +57,7 @@ Several OpenSeadragon parameters are also supported, see http://openseadragon.gi
 
 == Screenshots ==
 
-1. Options for OpenSeadragon Zoom galleries. First gallery links to precreated DeepZoom image, second and third use standart wordpress media files
+1. Options for Zoom OpenSeadragon galleries. First gallery links to precreated DeepZoom image, second and third use standart wordpress media files
 2. Single zoomable image
 3. Tiled gallery, collection mode
 4. Sequence mode
@@ -65,13 +65,13 @@ Several OpenSeadragon parameters are also supported, see http://openseadragon.gi
 
 == Frequently Asked Questions ==
 
-= How to replace specific gallery with OpenSeadragon Zoom gallery? =
+= How to replace specific gallery with Zoom OpenSeadragon gallery? =
 
-To replace wordpress gallery with OpenSeadragon Zoom you need to add openseadragon="true" to gallery shortcode.
+To replace wordpress gallery with Zoom OpenSeadragon you need to add openseadragon="true" to gallery shortcode.
 
 = How to replace all galleries with reel gallery? =
 
-Use OpenSeadragon Zoom Options section in Settings => Media.
+Use Zoom OpenSeadragon Options section in Settings => Media.
 
 = How to create really big zoomable image? =
 
